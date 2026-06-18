@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Présentation HighTech Inginner</title>
+  <link rel="stylesheet" href="css/css.css">
+  
+</head>
+<body>
+
+  <nav>
+    <button id="btnBienvenue">Bienvenue</button>
+    <button id="btnDashboard">Dashboard</button>
+    <button id="btnCarte">Carte</button>
+  </nav>
+
+  <section id="Bienvenue" class="fenetre active">
+  <!-- Titre principal -->
+    <h1>Bienvenue chez HighTech Inginner</h1>
+
+    <!-- Paragraphe avec saut de ligne, span pour mettre en évidence -->
+    <p>
+      <strong>HighTech Inginner</strong> est un bureau d'études spécialisé en
+      <span class="highlight">géomatique</span>, cartographie numérique,
+      télédétection et systèmes d'information géographique (SIG). <br>
+      Nous accompagnons les entreprises, collectivités et organisations dans
+      la gestion et l'analyse de leurs données spatiales.
+    </p>
+    <!-- Image -->
+    <img src="images/Logo_High_Inginner.jfif" alt="Logo HighTech Inginner">
+
+    <!-- Lien -->
+    <p>
+      Pour en savoir plus, visitez le site de 
+      <a href="https://fr.wikipedia.org/wiki/HighTech Inginner" target="_blank">HighTech Inginner sur Wikipédia</a>.
+    </p>
+
+    <!-- Listes -->
+     <ul>
+      <li>Cartographie numérique et webmapping</li>
+      <li>Télédétection et analyse satellitaire</li>
+      <li>Systèmes d'Information Géographique (SIG)</li>
+    </ul>
+
+    <ol>
+      <li>Acquisition des données</li>
+      <li>Analyse et traitement géospatial</li>
+      <li>Production de cartes et rapports</li>
+    </ol>
+
+       <!-- Formulaire -->
+     
+    <form id="contactForm">
+       <!-- Liste déroulante --> 
+        <P>Pays d'origine</P>
+<select name="pays"> 
+<option value="sn">Sénégal</option> 
+<option value="ml">Autres pays</option> <br>
+
+</select> <br>
+      <br><label for="nom">Nom :</label><br>
+      <input type="text" id="nom" name="nom" required><br>
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <button type="button" id="btnSubmit">Envoyer</button>
+    </form>
+
+    <!-- Tableau 3 lignes, 2 colonnes -->
+    <!-- Tableau des projets -->
+    <table>
+      <thead>
+        <tr>
+          <th>Projet</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cartographie des infrastructures urbaines</td>
+          <td>En cours</td>
+        </tr>
+        <tr>
+          <td>Suivi de l’occupation des sols par satellite</td>
+          <td>Terminé</td>
+        </tr>
+        <tr>
+          <td>Plateforme WebSIG pour collectivités</td>
+          <td>À venir</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="Dashboard" class="fenetre">
+    <h2>Dashboard</h2>
+    <div class="iframe-wrapper">
+
+    </div>
+  </section>
+
+  <section id="Carte" class="fenetre">
+    <h2>Carte Interactive</h2>
+
+    <div class="carte-wrapper">
+
+        <div class="carte-outils">
+            <button onclick="actualiserCarte()">🔄 Actualiser</button>
+            <button onclick="pleinEcranCarte()">⛶ Plein écran</button>
+        </div>
+
+        <section id="carte">
+            <em><p>Les écoles des 14 régions du Sénégal</p></em>
+            <h2>Carte</h2>
+
+            <iframe
+                id="mapFrame"
+                src="qgis2web_2026_06_18-15_50_25_665693/index.html"
+                width="100%"
+                height="600"
+                style="border:none;">
+            </iframe>
+        </section>
+
+    </div>
+</section>
+    </div>
+  </section>
+
+  <script src="javascript/java.js"></script>
+
+  <!-- Div / span supplémentaire pour structure -->
+  <div id="footer">
+    <p>© 2026 &mdash; Portail High_Inginner</p>
+  </div>
+  
+
+
+</body>
+
+</html>
